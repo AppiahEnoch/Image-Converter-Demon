@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0" prefWidth="146.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="convector.chooseExtension">
+   <children>
+      <VBox layoutX="33.0" layoutY="58.0" prefHeight="226.0" prefWidth="103.0" spacing="10.0">
+         <children>
+            <RadioButton fx:id="png" mnemonicParsing="false" onAction="#selectedItem" text="png" textFill="#c8c4e1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="rGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="jpj" mnemonicParsing="false" onAction="#selectedItem" text="jpg" textFill="#c8c4e1" toggleGroup="$rGroup" />
+            <RadioButton fx:id="jpeg" mnemonicParsing="false" onAction="#selectedItem" text="jpeg" textFill="#c8c4e1" toggleGroup="$rGroup" />
+            <RadioButton fx:id="svg" disable="true" mnemonicParsing="false" onAction="#selectedItem" text="SVG" textFill="#c8c4e1" toggleGroup="$rGroup" />
+            <RadioButton fx:id="bmp" mnemonicParsing="false" onAction="#selectedItem" text="bmp" textFill="#c8c4e1" toggleGroup="$rGroup" />
+            <RadioButton fx:id="webp" disable="true" mnemonicParsing="false" onAction="#selectedItem" prefHeight="21.0" prefWidth="96.0" text="Webp" textFill="#c8c4e1" toggleGroup="$rGroup" />
+            <RadioButton fx:id="tff" disable="true" layoutX="10.0" layoutY="215.0" mnemonicParsing="false" onAction="#selectedItem" prefHeight="21.0" prefWidth="96.0" text="tff" textFill="#c8c4e1" toggleGroup="$rGroup" />
+            <RadioButton fx:id="gif" layoutX="10.0" layoutY="256.0" mnemonicParsing="false" onAction="#selectedItem" prefHeight="21.0" prefWidth="96.0" text="gif" textFill="#c8c4e1" toggleGroup="$rGroup" />
+            <RadioButton fx:id="ico" disable="true" layoutX="10.0" layoutY="297.0" mnemonicParsing="false" onAction="#selectedItem" prefHeight="21.0" prefWidth="96.0" text="ico" textFill="#c8c4e1" toggleGroup="$rGroup" />
+         </children>
+      </VBox>
+      <JFXButton fx:id="btConvert" alignment="CENTER" layoutX="5.0" layoutY="334.0" onAction="#convert" prefHeight="46.0" prefWidth="135.0" stylesheets="@mainLock.css" text="Convert" textFill="#2e0cda">
+         <font>
+            <Font name="Arial Black" size="19.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8_process_48px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <HBox fx:id="hb" layoutY="4.0" onMouseDragged="#mouseDraged_" onMousePressed="#mousePressed_" prefHeight="33.0" prefWidth="146.0" />
+      <Text disable="true" fill="#670ff5" layoutX="-5.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONVERT TO ?" textAlignment="CENTER" wrappingWidth="103.00000441074371">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

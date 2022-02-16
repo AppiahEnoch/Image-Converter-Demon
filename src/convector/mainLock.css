@@ -1,0 +1,13 @@
+
+  .glyph-icon:hover {
+     -fx-fill:red;
+    }
+
+#btConvert:hover{
+-fx-background-color:red;
+}
+
+#btConvert{
+-fx-background-color:#1e1e1e;
+}
+

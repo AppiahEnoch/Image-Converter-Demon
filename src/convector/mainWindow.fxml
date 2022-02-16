@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="331.0" prefWidth="508.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="convector.Controller">
+   <children>
+      <Pane fx:id="imf" layoutX="10.0" layoutY="13.0" onDragDetected="#Drag" onDragDropped="#droped" onDragOver="#dragOverMe" prefHeight="301.0" prefWidth="489.0" style="-fx-background-color: blue;" />
+      <Text fx:id="txtDrop" disable="true" fill="#ede8f5" layoutX="179.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Drop Image" wrappingWidth="156.6708984375">
+         <font>
+            <Font size="53.0" />
+         </font>
+         <effect>
+            <GaussianBlur />
+         </effect>
+      </Text>
+      <ImageView fx:id="imageView" disable="true" fitHeight="271.0" fitWidth="296.0" layoutX="117.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@icons8_process_48px.png" />
+         </image>
+      </ImageView>
+      <JFXToolbar fx:id="tb" onMouseDragged="#mouseDraged_" onMousePressed="#mousePressed_" prefHeight="31.0" prefWidth="508.0" style="-fx-background-color: black;">
+         <children>
+            <ImageView disable="true" fitHeight="34.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8_poison_30px.png" />
+               </image>
+            </ImageView>
+         </children>
+         <center>
+            <Text disable="true" fill="#7305e1" strokeType="OUTSIDE" strokeWidth="0.0" text="IMAGE CONVERTER DEMON" wrappingWidth="224.6708984375" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="17.0" />
+               </font>
+            </Text>
+         </center>
+         <right>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="31.0" prefWidth="157.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="btMin" alignment="BOTTOM_RIGHT" contentDisplay="GRAPHIC_ONLY" onAction="#minimiseWindow" ripplerFill="#e4f3f5" textAlignment="CENTER" textFill="#4809e8">
+                     <graphic>
+                        <FontAwesomeIconView disable="true" fill="#4b0bf8" glyphName="MINUS" size="20" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btClose" alignment="BOTTOM_RIGHT" contentDisplay="GRAPHIC_ONLY" layoutX="54.0" layoutY="10.0" onAction="#closeApplication" ripplerFill="#e4f3f5" text="XXXX" textAlignment="CENTER" textFill="#4809e8">
+                     <graphic>
+                        <FontAwesomeIconView disable="true" fill="#4b0bf8" glyphName="CLOSE" size="20" />
+                     </graphic>
+                  </JFXButton>
+               </children></HBox>
+         </right>
+      </JFXToolbar>
+      <Text fill="#8d64da" layoutX="1.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" AECleanCodes- +233549822202" wrappingWidth="307.6708984375" />
+   </children>
+</Pane>
